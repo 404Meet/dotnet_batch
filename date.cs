@@ -15,5 +15,6 @@ namespace DifferenceTime{
              TimeSpan interval=t1-t2;
             System.Console.WriteLine(interval);
         }
+        
     }
 }
