@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Collections;
+using System.Text;
+using System.Linq;
 
 namespace DS{
 class Array { 
@@ -40,6 +42,7 @@ public class Linkedlist1{
         my_list.AddLast(40);
         my_list.AddLast(50);
         my_list.AddLast(60);
+        //System.Console.WriteLine("Largest number of LinkedList is: " + my_list.Max());
        int max = int.MinValue;
             foreach (int i in my_list)  {
                 if (i > max) max = i;
