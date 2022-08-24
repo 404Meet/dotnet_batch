@@ -4,12 +4,19 @@ import './index.css';
 import App from './App';
 import Sample from './Sample';
 import reportWebVitals from './reportWebVitals';
+import School_One from './School_One';
+import School_two from './School_two';
+import School_three from './School_three';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
     <Sample />
+    <School_One />
+    <School_two />
+    <School_three/>
   </React.StrictMode>
 );
 
