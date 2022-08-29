@@ -1,12 +1,13 @@
 const todos = (state = [], action) => {
   switch (action.type) {
-    case 'ADD_TODO':
+    case 'ADD_EVENT':
       return [
         ...state,
         {
           id: action.id,
           text: action.text,
           text2: action.text2,
+          text3: action.text3,
           completed: false
         }
       ]

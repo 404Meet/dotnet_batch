@@ -1,9 +1,10 @@
 import React from 'react'
 import FilterLink from '../containers/FilterLink'
 import { VisibilityFilters } from '../actions'
+import '../App.css' 
 
 const Footer = () => (
-  <div className='App'>
+  <div className='Footer'>
     <span>Show: </span>
     <FilterLink filter={VisibilityFilters.SHOW_ALL}>
       All

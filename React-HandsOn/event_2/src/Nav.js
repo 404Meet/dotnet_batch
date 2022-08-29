@@ -14,12 +14,13 @@ function Nav() {
             <Link style={navstyle} to='/'>
                 <li>Home</li>
             </Link> 
+            <Link style={navstyle}  to='/upEvents'>
+                <li>UpComing Events</li>
+            </Link>
             <Link style={navstyle} to='/about'>
                 <li>About</li>
             </Link>
-            <Link style={navstyle}  to='/shop'>
-                <li>Shop</li>
-            </Link>
+            
         </ul>
     </nav>
     </div>

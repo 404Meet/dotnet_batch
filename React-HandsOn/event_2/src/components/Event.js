@@ -1,18 +1,26 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import '../App.css' 
 
-const Todo = ({ onClick, completed, text, text2 }) => (
-  <li
+const Todo = ({ onClick, completed, text, text2, text3 }) => (
+  <div  class="card"
     onClick={onClick}
     style={{
       textDecoration: completed ? 'line-through' : 'none'
     }}
   >
-    <h4>
+    <div class="container">
+    <h4>Event: 
     {text}
     </h4>
+    Description: 
     {text2}
-  </li>
+    <p>
+    Region: 
+    {text3}
+    </p>
+    </div>
+  </div>
 )
 
 Todo.propTypes = {
