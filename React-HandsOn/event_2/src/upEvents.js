@@ -6,17 +6,6 @@ function Events() {
 const {events} = useFetch("http://localhost:8000/events");
   return (
     <div className="App">
-      {/* {events.map((event)=>(
-        <div key={event.id}>
-          {event.title}
-        </div>
-      )
-      )} */}
-      {/* {events.map((event) => (
-        <div key ={event.id}>
-          {event.title}
-        </div>
-      ))} */}
 
       {events.map((event) => (
       <div>

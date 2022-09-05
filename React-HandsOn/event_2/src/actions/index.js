@@ -1,7 +1,7 @@
-let nextTodoId = 0
+let nextEvent = 0
 export const addevent = (text,text2,text3) => ({
   type: 'ADD_EVENT',
-  id: nextTodoId++,
+  id: nextEvent++,
   text: text,
   text2: text2,
   text3: text3
@@ -12,8 +12,8 @@ export const setVisibilityFilter = filter => ({
   filter
 })
 
-export const toggleTodo = id => ({
-  type: 'TOGGLE_TODO',
+export const toggle = id => ({
+  type: 'TOGGLE_EVENT',
   id
 })
 

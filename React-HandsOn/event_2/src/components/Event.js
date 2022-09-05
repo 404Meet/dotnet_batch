@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import '../App.css' 
 
-const Todo = ({ onClick, completed, text, text2, text3 }) => (
+const Event = ({ onClick, completed, text, text2, text3 }) => (
   <div  class="card"
     onClick={onClick}
     style={{
@@ -23,11 +23,11 @@ const Todo = ({ onClick, completed, text, text2, text3 }) => (
   </div>
 )
 
-Todo.propTypes = {
+Event.propTypes = {
   onClick: PropTypes.func.isRequired,
   completed: PropTypes.bool.isRequired,
   text: PropTypes.string.isRequired,
   text2: PropTypes.string.isRequired,
 }
 
-export default Todo
+export default Event

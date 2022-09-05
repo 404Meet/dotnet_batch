@@ -1,4 +1,4 @@
-const todos = (state = [], action) => {
+const eventss = (state = [], action) => {
   switch (action.type) {
     case 'ADD_EVENT':
       return [
@@ -11,15 +11,15 @@ const todos = (state = [], action) => {
           completed: false
         }
       ]
-    case 'TOGGLE_TODO':
-      return state.map(todo =>
-        (todo.id === action.id)
-          ? {...todo, completed: !todo.completed}
-          : todo
+    case 'TOGGLE_EVENT':
+      return state.map(toevents =>
+        (toevents.id === action.id)
+          ? {...toevents, completed: !toevents.completed}
+          : toevents
       )
     default:
       return state
   }
 }
 
-export default todos
+export default eventss

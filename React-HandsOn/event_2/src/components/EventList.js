@@ -1,27 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Todo from './Event'
+import Event from './Event'
 
-const TodoList = ({ todos, toggleTodo }) => (
+const Eventlist = ({ eventss, toggle }) => (
   <ul>
-    {todos.map(todo =>
-      <Todo
-        key={todo.id}
-        {...todo}
-        onClick={() => toggleTodo(todo.id)}
+    {eventss.map(toevents =>
+      <Event
+        key={toevents.id}
+        {...toevents}
+        onClick={() => toggle(toevents.id)}
       />
     )}
   </ul>
 )
 
-TodoList.propTypes = {
-  todos: PropTypes.arrayOf(PropTypes.shape({
+Eventlist.propTypes = {
+  eventss: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     completed: PropTypes.bool.isRequired,
     text: PropTypes.string.isRequired,
     text2: PropTypes.string.isRequired
   }).isRequired).isRequired,
-  toggleTodo: PropTypes.func.isRequired
+  toggle: PropTypes.func.isRequired
 }
 
-export default TodoList
+export default Eventlist
