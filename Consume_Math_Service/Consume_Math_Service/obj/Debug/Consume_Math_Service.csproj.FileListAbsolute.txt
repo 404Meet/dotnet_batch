@@ -1,0 +1,8 @@
+C:\Users\meet.popat\source\repos\Consume_Math_Service\Consume_Math_Service\obj\Debug\Consume_Math_Service.csproj.AssemblyReference.cache
+C:\Users\meet.popat\source\repos\Consume_Math_Service\Consume_Math_Service\obj\Debug\Consume_Math_Service.csproj.SuggestedBindingRedirects.cache
+C:\Users\meet.popat\source\repos\Consume_Math_Service\Consume_Math_Service\obj\Debug\Consume_Math_Service.csproj.CoreCompileInputs.cache
+C:\Users\meet.popat\source\repos\Consume_Math_Service\Consume_Math_Service\bin\Debug\Consume_Math_Service.exe.config
+C:\Users\meet.popat\source\repos\Consume_Math_Service\Consume_Math_Service\bin\Debug\Consume_Math_Service.exe
+C:\Users\meet.popat\source\repos\Consume_Math_Service\Consume_Math_Service\bin\Debug\Consume_Math_Service.pdb
+C:\Users\meet.popat\source\repos\Consume_Math_Service\Consume_Math_Service\obj\Debug\Consume_Math_Service.exe
+C:\Users\meet.popat\source\repos\Consume_Math_Service\Consume_Math_Service\obj\Debug\Consume_Math_Service.pdb

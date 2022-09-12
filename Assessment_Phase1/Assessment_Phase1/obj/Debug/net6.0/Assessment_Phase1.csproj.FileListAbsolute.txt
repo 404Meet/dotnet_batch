@@ -1,0 +1,15 @@
+C:\Users\meet.popat\source\repos\Assessment_Phase1\Assessment_Phase1\obj\Debug\net6.0\Assessment_Phase1.csproj.AssemblyReference.cache
+C:\Users\meet.popat\source\repos\Assessment_Phase1\Assessment_Phase1\obj\Debug\net6.0\Assessment_Phase1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\meet.popat\source\repos\Assessment_Phase1\Assessment_Phase1\obj\Debug\net6.0\Assessment_Phase1.AssemblyInfoInputs.cache
+C:\Users\meet.popat\source\repos\Assessment_Phase1\Assessment_Phase1\obj\Debug\net6.0\Assessment_Phase1.AssemblyInfo.cs
+C:\Users\meet.popat\source\repos\Assessment_Phase1\Assessment_Phase1\obj\Debug\net6.0\Assessment_Phase1.csproj.CoreCompileInputs.cache
+C:\Users\meet.popat\source\repos\Assessment_Phase1\Assessment_Phase1\bin\Debug\net6.0\Assessment_Phase1.exe
+C:\Users\meet.popat\source\repos\Assessment_Phase1\Assessment_Phase1\bin\Debug\net6.0\Assessment_Phase1.deps.json
+C:\Users\meet.popat\source\repos\Assessment_Phase1\Assessment_Phase1\bin\Debug\net6.0\Assessment_Phase1.runtimeconfig.json
+C:\Users\meet.popat\source\repos\Assessment_Phase1\Assessment_Phase1\bin\Debug\net6.0\Assessment_Phase1.dll
+C:\Users\meet.popat\source\repos\Assessment_Phase1\Assessment_Phase1\bin\Debug\net6.0\Assessment_Phase1.pdb
+C:\Users\meet.popat\source\repos\Assessment_Phase1\Assessment_Phase1\obj\Debug\net6.0\Assessment_Phase1.dll
+C:\Users\meet.popat\source\repos\Assessment_Phase1\Assessment_Phase1\obj\Debug\net6.0\refint\Assessment_Phase1.dll
+C:\Users\meet.popat\source\repos\Assessment_Phase1\Assessment_Phase1\obj\Debug\net6.0\Assessment_Phase1.pdb
+C:\Users\meet.popat\source\repos\Assessment_Phase1\Assessment_Phase1\obj\Debug\net6.0\Assessment_Phase1.genruntimeconfig.cache
+C:\Users\meet.popat\source\repos\Assessment_Phase1\Assessment_Phase1\obj\Debug\net6.0\ref\Assessment_Phase1.dll

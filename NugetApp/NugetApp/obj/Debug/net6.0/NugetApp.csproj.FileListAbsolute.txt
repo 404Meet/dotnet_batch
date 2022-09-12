@@ -1,0 +1,15 @@
+C:\Users\meet.popat\source\repos\NugetApp\NugetApp\bin\Debug\net6.0\NugetApp.exe
+C:\Users\meet.popat\source\repos\NugetApp\NugetApp\bin\Debug\net6.0\NugetApp.deps.json
+C:\Users\meet.popat\source\repos\NugetApp\NugetApp\bin\Debug\net6.0\NugetApp.runtimeconfig.json
+C:\Users\meet.popat\source\repos\NugetApp\NugetApp\bin\Debug\net6.0\NugetApp.dll
+C:\Users\meet.popat\source\repos\NugetApp\NugetApp\bin\Debug\net6.0\NugetApp.pdb
+C:\Users\meet.popat\source\repos\NugetApp\NugetApp\obj\Debug\net6.0\NugetApp.csproj.AssemblyReference.cache
+C:\Users\meet.popat\source\repos\NugetApp\NugetApp\obj\Debug\net6.0\NugetApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\meet.popat\source\repos\NugetApp\NugetApp\obj\Debug\net6.0\NugetApp.AssemblyInfoInputs.cache
+C:\Users\meet.popat\source\repos\NugetApp\NugetApp\obj\Debug\net6.0\NugetApp.AssemblyInfo.cs
+C:\Users\meet.popat\source\repos\NugetApp\NugetApp\obj\Debug\net6.0\NugetApp.csproj.CoreCompileInputs.cache
+C:\Users\meet.popat\source\repos\NugetApp\NugetApp\obj\Debug\net6.0\NugetApp.dll
+C:\Users\meet.popat\source\repos\NugetApp\NugetApp\obj\Debug\net6.0\refint\NugetApp.dll
+C:\Users\meet.popat\source\repos\NugetApp\NugetApp\obj\Debug\net6.0\NugetApp.pdb
+C:\Users\meet.popat\source\repos\NugetApp\NugetApp\obj\Debug\net6.0\NugetApp.genruntimeconfig.cache
+C:\Users\meet.popat\source\repos\NugetApp\NugetApp\obj\Debug\net6.0\ref\NugetApp.dll

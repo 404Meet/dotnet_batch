@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consume_Math_Service_Part2", "Consume_Math_Service_Part2\Consume_Math_Service_Part2.csproj", "{59188A17-636A-4596-8C1E-E36B9B6721FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59188A17-636A-4596-8C1E-E36B9B6721FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59188A17-636A-4596-8C1E-E36B9B6721FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59188A17-636A-4596-8C1E-E36B9B6721FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59188A17-636A-4596-8C1E-E36B9B6721FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D490E729-7839-49DA-8B1F-D9C13460B832}
+	EndGlobalSection
+EndGlobal
