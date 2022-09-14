@@ -1,0 +1,74 @@
+﻿@model IEnumerable<CartDetails>
+
+@{
+    ViewData["Title"] = "ShowCart";
+}
+<br />
+<h1>ShowCart</h1>
+<br />
+<br />
+@{
+    var TotalPrice = 0 ;
+    var GrandTotal = 0;
+}
+@foreach(var obj in Model)
+{
+    if(obj.quantity>0)
+    {  <div class="card border-secondary">
+        <table class="table table-bordered table-striped" style="width:100%">
+            <thead>
+                <tr class="table-primary">
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Quantity
+                    </th>
+                    <th>
+                        Price
+                    </th>
+                    <th>
+                        Total
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @*@foreach (var obj2 in Model)
+                {*@
+                <tr class="table-danger">
+                        <td width="50%">
+                            @obj.Name
+                        </td>
+                        <td width="10%">
+                            <button type="button" class="btn btn-outline-success">+</button>
+                            @obj.quantity
+                            <button type="button" class="btn btn-outline-info">-</button>
+                        </td>
+                        <td width="20%">
+                            Rs.
+                            @obj.Price
+                            /-
+                        </td>
+                        <td width="20%">Rs.
+                            @{
+                                TotalPrice = obj.Price * obj.quantity;
+                                GrandTotal = GrandTotal + TotalPrice;
+                              }
+                             @TotalPrice /-
+                        </td>
+                    </tr>
+                @*}*@
+            </tbody>
+        </table>
+        </div>
+    }
+}
+<br />
+<div class="text-end">
+    <button type="button" class="btn btn-warning"><i class="bi bi-wallet-fill"></i> &nbsp; Grand Total: @GrandTotal</button>
+    <button type="button" class="btn btn-light"><i class="bi bi-paypal"></i> &nbsp; PayPal</button>
+    <button type="button" class="btn btn-danger"><i class="bi bi-wallet"></i> &nbsp; UPI</button>
+    <button type="button" class="btn btn-success"><i class="bi bi-credit-card"></i> &nbsp; Card</button>
+</div>
+
+

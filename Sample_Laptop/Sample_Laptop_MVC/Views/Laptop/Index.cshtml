@@ -1,0 +1,161 @@
+﻿@model IEnumerable<LaptopDetails>
+@{
+    ViewData["Title"] = "Index";
+}
+<br />
+<h4 class="font-monospace"> You + Laptop + Tech = Everything Easier </h4>
+<p class="font-monospace">Let's find a laptop that suits you the most, don't worry we have it all. Best offer plus best price...Happy Shopping! </p>
+<br />
+@*
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Ram
+            </th>
+            <th>
+                Processor
+            </th>
+            <th>
+                Description
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var obj in Model)
+        {
+            <tr>
+                <td width="30%">
+                    @obj.Name
+                </td>
+                <td width="10%">
+                    @obj.Price
+                </td>
+                <td width="5%">
+                    @obj.Ram
+                </td>
+                <td width="20%">
+                    @obj.Processor
+                </td>
+                <td width="35%">
+                    @obj.Description
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+*@ 
+
+@*@foreach (var obj in Model)
+   {
+    <div class="card border-danger mb-3" style="width:30%">
+        <h3 class="card-header">@obj.Name</h3>
+        <div class="card-body">
+            <h5 class="card-title">RS @obj.Price</h5>
+            <h6 class="card-subtitle text-muted">Only /-</h6>
+        </div>
+        <div class="col-md-4">
+            <img src="https://media.istockphoto.com/photos/laptop-with-blank-screen-on-white-picture-id479520746?k=20&m=479520746&s=612x612&w=0&h=vrxDqBMLe1zqcwIFY0f1SdAjKjOKhEno4HtlyKwSHO4=" class="img-fluid rounded-start" alt="...">
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="d-block user-select-none" width="100%" height="200" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
+            <rect width="100%" height="100%" fill="#868e96"></rect>
+            <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
+        </svg>
+        <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+        <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+        </div>
+        <div class="card-footer text-muted">
+            2 days ago
+        </div>
+    </div>
+ }*@
+
+@*
+ @foreach (var obj in Model)
+   {
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col h-100">   
+         <div class="card-group">
+           <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
+              <div class="card-header">@obj.Name</div>
+               <div class="card-body">
+                 <h4 class="card-title">Secondary card title</h4>
+                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+               </div>
+           </div>
+        </div>
+    </div>
+    </div>
+  }*@
+
+ @foreach (var obj in Model)
+{
+<div class="card border-light mb-3" style="max-width: 1100px;">
+    <div class="row g-0" >
+            <div class="col-md-4">
+            <img src="@obj.image" height="350" width="340" style="padding:5px;" alt="...">
+        </div>
+            <div class="col-md-8">
+             <div class="card-body border-danger">
+                <h5 class="card-title">@obj.Name</h5>
+                <h5 class="card-text">RS @obj.Price</h5>
+                <h6 class="card-subtitle text-muted">Only /-</h6><br>
+                <h5 class="card-text">RAM: @obj.Ram</h5>
+                <h5 class="card-text ">Processor: @obj.Processor</h5>
+                <p class="card-text">Description: @obj.Description .</p>
+                <a href="#" class="card-link">Official link</a>
+                <a href="#" class="card-link">EMI link</a>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <a class="btn btn-primary" asp-controller="Cart" asp-action="Show" asp-route-ID="@obj.ID"><i class="bi bi-cart-fill"></i> &nbsp; Add to Cart</a>
+                    <button type="button" class="btn btn-secondary" asp-controller="Home" asp-action="About"><i class="bi bi-bag-heart-fill"></i> &nbsp; Wishtlist</button>
+            </div>
+        </div>
+            <ul class="card border-secondary mb-3 list-group list-group-flush">
+                <li class="list-group-item">Bank Offer 5% Cashback on Axis Bank Credit Card T&C</li>
+                <li class="card border-secondary mb-1 list-group-item">Bank OfferExtra 2% off on UPI transactionsT&C</li>
+                <li class="list-group-item">EMI starting from ₹1,999/month</li>
+            </ul>
+    </div>
+</div><br />
+}
+
+<div>
+    <ul class="justify-content-center pagination pagination-lg">
+        <li class="page-item disabled">
+            <a class="page-link" href="#">&laquo;</a>
+        </li>
+        <li class="page-item active">
+            <a class="page-link" href="#">1</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#">2</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#">3</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#">4</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#">5</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#">&raquo;</a>
+        </li>
+    </ul>
+</div>

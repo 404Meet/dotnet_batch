@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YnXgXZ8gh/7a3HtkUg3b/ssgdoRzMMLLjpsbnKL+LNY=",
+  "Hash": "OGcjyTlm18mAdh5ZMRvs/c3DAu22NmyjUuGemR/vgrA=",
   "Source": "Sample_Laptop_MVC",
   "BasePath": "_content/Sample_Laptop_MVC",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\meet.popat\\source\\repos\\Sample_Laptop\\Sample_Laptop_MVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Sample_Laptop_MVC.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\meet.popat\\source\\repos\\Sample_Laptop\\Sample_Laptop_MVC\\wwwroot\\css\\bootswatchTheme.css",
+      "SourceId": "Sample_Laptop_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\meet.popat\\source\\repos\\Sample_Laptop\\Sample_Laptop_MVC\\wwwroot\\",
+      "BasePath": "_content/Sample_Laptop_MVC",
+      "RelativePath": "css/bootswatchTheme.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bootswatchTheme.css"
     },
     {
       "Identity": "C:\\Users\\meet.popat\\source\\repos\\Sample_Laptop\\Sample_Laptop_MVC\\wwwroot\\css\\site.css",

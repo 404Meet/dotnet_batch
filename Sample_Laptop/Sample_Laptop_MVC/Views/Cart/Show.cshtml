@@ -1,0 +1,27 @@
+﻿@model CartDetails
+@{
+    ViewData["Title"] = "Index";
+}
+@*<br />
+<h1>Cart</h1>
+<br />*@
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h4 class="text-primary font-monospace">Who's Buying ? If you're a retailer enter specific quantity.</h4>
+            <h5 class="text-primary font-monospace">Product Detaills</h5>
+        </div>
+        <div class="col">
+            <input asp-for="ID" class="form-control card border-secondary mb-1" placeholder="ID" readonly />
+            <input asp-for="Name" class="form-control card border-secondary mb-1" placeholder="Name" readonly />
+            <input asp-for="Price" class="form-control card border-secondary mb-1" placeholder="Price" readonly />
+        </div>
+            <div class="mb-3">
+                <label asp-for= "quantity">Enter Quantity</label>
+                <input asp-for="quantity" class="form-control" />
+                <br />
+                <button type="submit" class="btn btn-primary">Go to Cart</button>
+            </div>
+        
+    </div>
+</form>

@@ -1,0 +1,30 @@
+﻿@model Account
+@{
+    ViewData["Title"] = "SignUp";
+}
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2 ">
+            <h4 class="text-primary font-monospace">Sign-Up</h4>
+        </div>
+        <div class="col">
+            <label asp-for="ID">Enter UIN </label>
+            <input asp-for="ID" class="form-control card border-secondary mb-1" placeholder="ID"/>
+            <label asp-for="UserName"> UserName </label>
+            <input asp-for="UserName" class="form-control card border-secondary mb-1" placeholder="UserName"/>
+            <label asp-for="Password"> Password </label>
+            <input asp-for="Password" class="form-control card border-secondary mb-1" placeholder="Password"/>
+            <label asp-for="Email">Email </label>
+            <input asp-for="Email" class="form-control card border-secondary mb-1" placeholder="Email" />
+            <label asp-for="Mobile">Mobile</label>
+            <input asp-for="Mobile" class="form-control card border-secondary mb-1" placeholder="Mobile"/>
+        </div>
+        <div class="mb-3">
+            <br />
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+        </div>
+
+    </div>
+</form>
+
