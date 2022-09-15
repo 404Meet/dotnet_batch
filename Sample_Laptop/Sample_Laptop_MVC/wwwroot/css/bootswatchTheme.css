@@ -5252,8 +5252,8 @@ textarea.form-control-lg {
 
 .alert-secondary {
     --bs-alert-color: #8c226e;
-    --bs-alert-bg: #fbd7f1;
-    --bs-alert-border-color: #f9c4ea;
+    --bs-alert-bg: #ea7ccb;
+    --bs-alert-border-color: #ea7ccb;
 }
 
     .alert-secondary .alert-link {
