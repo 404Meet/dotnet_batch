@@ -3,7 +3,6 @@ namespace Sample_Laptop_MVC.Models
 {
     public class CartDetails
     {
-        
             [Key]
             public int ID { get; set; }
             [Required]
