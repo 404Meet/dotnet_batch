@@ -17,9 +17,14 @@ namespace SepcflowSelenium.StepDefinitions
 
         private ChromeDriver chromeDriver;
 
-        public YoutubeSearchFeatureSteps()
+        public YoutubeSearchFeatureSteps() => chromeDriver = new ChromeDriver("C:\\Users\\meet.popat\\Downloads\\chromedriver_win32");
+        
+
+        [When(@"I press the search button")]
+        public void WhenIPressTheSearchButton()
         {
-            chromeDriver = new ChromeDriver();
+            var searchButton = chromeDriver.FindElement(By.CssSelector("button#search-icon-legacy"));
+            searchButton.Click();
         }
 
         [Given(@"I have navigated to youtube website")]
@@ -29,21 +34,27 @@ namespace SepcflowSelenium.StepDefinitions
             Assert.IsTrue(chromeDriver.Title.ToLower().Contains("youtube"));
         }
 
+        //[Given(@"I have entered (.*) as search keyword")]
+        //public void GivenIHaveEnteredIndiaAsSearchKeyword(String searchString)
+        //{
+        //    this.searchKeyword = searchString.ToLower();
+        //    var searchInputBox = chromeDriver.FindElement(By.Id("search"));
+        //    var wait = new WebDriverWait(chromeDriver, TimeSpan.FromSeconds(200));
+        //    wait.Until(ExpectedConditions.ElementIsVisible(By.Id("search")));
+        //    searchInputBox.SendKeys(searchKeyword);
+        //}
+
         [Given(@"I have entered (.*) as search keyword")]
         public void GivenIHaveEnteredIndiaAsSearchKeyword(String searchString)
         {
             this.searchKeyword = searchString.ToLower();
-            var searchInputBox = chromeDriver.FindElement(By.Id("search"));
-            var wait = new WebDriverWait(chromeDriver, TimeSpan.FromSeconds(2));
-            wait.Until(ExpectedConditions.ElementIsVisible(By.Id("search")));
-            searchInputBox.SendKeys(searchKeyword);
-        }
 
-        [When(@"I press the search button&quot;")]
-        public void WhenIPressTheSearchButton()
-        {
-            var searchButton = chromeDriver.FindElement(By.CssSelector("button#search-icon-legacy"));
-            searchButton.Click();
+            WebDriverWait wait = new WebDriverWait(chromeDriver, TimeSpan.FromMilliseconds(1500));
+            var elementsWithSearchID = wait.Until((driver) => driver.FindElements(By.Id("search")));
+            var search = elementsWithSearchID.Where(e => e.TagName == "input").FirstOrDefault();
+            search.SendKeys(searchKeyword);
+
+
         }
 
         [Then(@"I should be navigate to search results page")]
@@ -57,7 +68,7 @@ namespace SepcflowSelenium.StepDefinitions
         }
 
 
-    public void Dispose()
+        public void Dispose()
     {
         if (chromeDriver != null)
         {
