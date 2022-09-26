@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "c/PKS5e7kziyGuAkRLaf3EfUAaAzQPpKUeXtQ9X7TEb9dEGRxsEG9WDJwjKomgrBzHUXM9gTHuWMaEndTDlryg==",
+  "dgSpecHash": "Z5BLClJ5rwZ7XnBwoLw7teQ3EQd99bP6CpAHhItpIsaIz4zBuyGhrd287AxrBTq1MAmFEA/Ka/ejt+IGJ/9WXw==",
   "success": true,
   "projectFilePath": "C:\\Users\\meet.popat\\source\\repos\\HelloWorldProject\\HelloWorldProject\\HelloWorldProject.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\meet.popat\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\meet.popat\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
+    "C:\\Users\\meet.popat\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512"
+  ],
   "logs": []
 }
