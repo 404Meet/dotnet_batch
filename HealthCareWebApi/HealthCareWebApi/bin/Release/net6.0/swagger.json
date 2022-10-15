@@ -266,18 +266,6 @@
         }
       }
     },
-    "/Employee/SaveFile": {
-      "post": {
-        "tags": [
-          "Employee"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
     "/Medicine": {
       "get": {
         "tags": [
@@ -365,10 +353,37 @@
         }
       }
     },
-    "/Medicine/SaveFile": {
+    "/User": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "operationId": "GetUser",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
       "post": {
         "tags": [
-          "Medicine"
+          "User"
+        ],
+        "operationId": "PostUser",
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -472,6 +487,23 @@
           "type": "integer"
         },
         "photoFileName": {
+          "type": "string"
+        }
+      }
+    },
+    "User": {
+      "type": "object",
+      "properties": {
+        "mobile": {
+          "type": "string"
+        },
+        "userName": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "emailID": {
           "type": "string"
         }
       }
