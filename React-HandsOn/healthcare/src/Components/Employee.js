@@ -15,7 +15,10 @@ export default class Employee extends Component{
             Department:"",
             DateOfJoining:"",
             PhotoFileName:"",
-            PhotoPath:variables.PHOTO_URL
+            DepartmentName:"",
+
+            DepartmentFilter:"",
+            EmployeeWithoutFilter:[]
         }
     }
 
@@ -24,7 +27,7 @@ export default class Employee extends Component{
         fetch(variables.API_URL+'employee')
         .then(response=>response.json())
         .then(data=>{
-            this.setState({employees:data});
+            this.setState({employees:data,EmployeeWithoutFilter:data});
         });
 
         fetch(variables.API_URL+'department')
@@ -32,6 +35,25 @@ export default class Employee extends Component{
         .then(data=>{
             this.setState({departments:data});
         });
+    }
+
+    FilterFn(){
+        var DepartmentFilter = this.state.DepartmentFilter;
+
+        var filteredData=this.state.EmployeeWithoutFilter.filter(
+            function(el){
+                return el.Department.toString().toLowerCase().includes(
+                    DepartmentFilter.toString().trim().toLowerCase()
+                )
+            }
+        );
+
+        this.setState({employees:filteredData});
+    }
+
+    changeDepartmentFilter = (e)=>{
+        this.state.DepartmentFilter=e.target.value;
+        this.FilterFn();
     }
 
     componentDidMount(){
@@ -139,21 +161,21 @@ export default class Employee extends Component{
         }
     }
 
-    imageUpload=(e)=>{
-        e.preventDefault();
+    // imageUpload=(e)=>{
+    //     e.preventDefault();
 
-        const formData=new FormData();
-        formData.append("file",e.target.files[0],e.target.files[0].name);
+    //     const formData=new FormData();
+    //     formData.append("file",e.target.files[0],e.target.files[0].name);
 
-        fetch(variables.API_URL+'employee/savefile',{
-            method:'POST',
-            body:formData
-        })
-        .then(res=>res.json())
-        .then(data=>{
-            this.setState({PhotoFileName:data});
-        })
-    }
+    //     fetch(variables.API_URL+'employee/savefile',{
+    //         method:'POST',
+    //         body:formData
+    //     })
+    //     .then(res=>res.json())
+    //     .then(data=>{
+    //         this.setState({PhotoFileName:data});
+    //     })
+    // }
 
     render(){
         const {
@@ -164,7 +186,6 @@ export default class Employee extends Component{
             EmployeeName,
             Department,
             DateOfJoining,
-            PhotoPath,
             PhotoFileName
         }=this.state;
 
@@ -178,6 +199,15 @@ export default class Employee extends Component{
     onClick={()=>this.addClick()}>
         Add Employee
     </button>
+
+
+    <div className="d-flex flex-row">
+        <input className="form-control m-2"
+            onChange={this.changeDepartmentFilter}
+            placeholder="Filter"/>
+    </div>
+
+
     <table className="table table-striped">
     <thead>
     <tr>

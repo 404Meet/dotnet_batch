@@ -17,7 +17,10 @@ export default class Employee extends Component{
             Price:0,
             Description:"",
             PhotoFileName:"anonymous.png",
-            PhotoPath:variables.PHOTO_URL
+
+            CategoryFilter:"",
+            MedicineFilter:"",
+            MedicineWithoutFilter:[]
         }
     }
 
@@ -26,7 +29,7 @@ export default class Employee extends Component{
         fetch(variables.API_URL+'Medicine')
         .then(response=>response.json())
         .then(data=>{
-            this.setState({Medicines:data});
+            this.setState({Medicines:data,MedicineWithoutFilter:data});
         });
 
         fetch(variables.API_URL+'Category')
@@ -34,6 +37,44 @@ export default class Employee extends Component{
         .then(data=>{
             this.setState({Categories:data});
         });
+    }
+
+    FilterFn(){
+        var CategoryFilter = this.state.CategoryFilter;
+
+        var filteredData=this.state.MedicineWithoutFilter.filter(
+            function(el){
+                return el.Category.toString().toLowerCase().includes(
+                    CategoryFilter.toString().trim().toLowerCase()
+                )
+            }
+        );
+
+        this.setState({Medicines:filteredData});
+    }
+
+    MedFilterFn(){
+        var MedicineFilter = this.state.MedicineFilter;
+
+        var filteredData=this.state.MedicineWithoutFilter.filter(
+            function(el){
+                return el.MedicineName.toString().toLowerCase().includes(
+                    MedicineFilter.toString().trim().toLowerCase()
+                )
+            }
+        );
+
+        this.setState({Medicines:filteredData});
+    }
+
+    changeCategoryFilter = (e)=>{
+        this.state.CategoryFilter=e.target.value;
+        this.FilterFn();
+    }
+
+    changeMedicineFilter = (e)=>{
+        this.state.MedicineFilter=e.target.value;
+        this.MedFilterFn();
     }
 
     componentDidMount(){
@@ -155,21 +196,21 @@ export default class Employee extends Component{
         }
     }
 
-    imageUpload=(e)=>{
-        e.preventDefault();
+    // imageUpload=(e)=>{
+    //     e.preventDefault();
 
-        const formData=new FormData();
-        formData.append("file",e.target.files[0],e.target.files[0].name);
+    //     const formData=new FormData();
+    //     formData.append("file",e.target.files[0],e.target.files[0].name);
 
-        fetch(variables.API_URL+'Medicine/savefile',{
-            method:'POST',
-            body:formData
-        })
-        .then(res=>res.json())
-        .then(data=>{
-            this.setState({PhotoFileName:data});
-        })
-    }
+    //     fetch(variables.API_URL+'Medicine/savefile',{
+    //         method:'POST',
+    //         body:formData
+    //     })
+    //     .then(res=>res.json())
+    //     .then(data=>{
+    //         this.setState({PhotoFileName:data});
+    //     })
+    // }
 
     render(){
         const {
@@ -182,7 +223,6 @@ export default class Employee extends Component{
             ExpiryPeriod,
             Price,
             Description,
-            PhotoPath,
             PhotoFileName
         }=this.state;
 
@@ -196,6 +236,19 @@ export default class Employee extends Component{
     onClick={()=>this.addClick()}>
         Add Medicine
     </button>
+    
+    
+    <div className="d-flex flex-row">
+        <input className="form-control m-2"
+            onChange={this.changeCategoryFilter}
+            placeholder="Category / Sympton"/>
+
+        <input className="form-control m-2"
+            onChange={this.changeMedicineFilter}
+            placeholder="Search for Medicine"/>
+    </div>
+    <br></br>
+
     <table className="table table-striped">
     <thead>
     <tr>
@@ -237,7 +290,7 @@ export default class Employee extends Component{
                 <td><img alt="photo" width="250px" height="250px" src={med.PhotoFileName}/></td>
                 <td>
                 <button type="button"
-                className="btn btn-light mr-1"
+                className="btn btn-light mr-1 m-1"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
                 onClick={()=>this.editClick(med)}>
@@ -246,9 +299,8 @@ export default class Employee extends Component{
                     <path fillRule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
                     </svg>
                 </button>
-
                 <button type="button"
-                className="btn btn-light mr-1"
+                className="btn btn-light mr-1 m-1"
                 onClick={()=>this.deleteClick(med.MedicineId)}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-trash-fill" viewBox="0 0 16 16">
                     <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
