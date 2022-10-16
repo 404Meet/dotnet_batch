@@ -66,28 +66,28 @@ export default class Register extends Component
                                 
                                     <div className="input-group mb-3">
                                         <span className="input-group-text">UserName</span>
-                                        <input type="text" className="form-control"
+                                        <input id="uname" type="text" className="form-control"
                                         onChange={this.changeName}
                                         />
                                     </div>
 
                                     <div className="input-group mb-3">
                                         <span className="input-group-text">Password</span>
-                                        <input type="text" className="form-control"
+                                        <input id="pass" type="text" className="form-control"
                                         onChange={this.changePassword}
                                         />
                                     </div>
 
                                     <div className="input-group mb-3">
                                         <span className="input-group-text">Email ID</span>
-                                        <input type="text" className="form-control"
+                                        <input id="email" type="text" className="form-control"
                                         onChange={this.changeEmailID}
                                         />
                                     </div>
 
                                     <div className="input-group mb-3">
                                         <span className="input-group-text">Mobile</span>
-                                        <input type="text" className="form-control"
+                                        <input id="mobile" type="text" className="form-control"
                                         onChange={this.changeMobile}
                                         />
                                     </div>   
@@ -96,7 +96,7 @@ export default class Register extends Component
                                     <img alt="photo" width="250px" height="250px" src="https://www.svgrepo.com/show/178973/profile-social.svg"/>
                                   </div>
                             </div>
-                            <button type="button" className="btn btn-primary float-start" onClick={()=>this.createClick()}>Create</button>
+                            <button id="reg" type="button" className="btn btn-primary float-start" onClick={()=>this.createClick()}>Create</button>
                             </div> 
                 </div>
 

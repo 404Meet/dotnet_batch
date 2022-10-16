@@ -11,6 +11,7 @@ import UserPortal from './Components/UserPortal';
 import AdminPortal from './Components/AdminPortal';
 import Cart from './Components/Cart';
 import Payment from './Components/Payment';
+import cartt from './Components/cartt';
 
 function App() {
   return (
@@ -52,13 +53,13 @@ function App() {
           </ul>
           <form className="d-flex">
             <ul className="navbar-nav me-auto">
-              <li className="nav-item- m-1">
-                <NavLink className="btn btn-outline-primary nav-link" to="/login" >
+              <li id="Login" className="nav-item- m-1">
+                <NavLink id="Login" className="btn btn-outline-primary nav-link" to="/login" >
                   Login
                 </NavLink>
               </li>
-              <li className="nav-item- m-1">
-                <NavLink className="btn btn-outline-primary nav-link" to="/register" >
+              <li id="Registeration" className="nav-item- m-1">
+                <NavLink id="Registeration" className="btn btn-outline-primary nav-link" to="/register" >
                   Register
                 </NavLink>
               </li>
@@ -78,6 +79,7 @@ function App() {
         <Route path='/login' component={Login}/>
         <Route path='/Register' component={Register}/>
         <Route path='/Cart' component={Cart}/>
+        <Route path='/cartt/:id' component={cartt}/>
         <Route path='/Payment' component={Payment}/>
         <Route path='/AdminPortal' component={AdminPortal}/>
         <Route path='/UserPortal' component={UserPortal}/>
