@@ -76,11 +76,11 @@ namespace HealthCareByABC_Specflow.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("A detailed test through the HealthCareByABC Website")]
-        [NUnit.Framework.CategoryAttribute("HealthCareByABC")]
+        [NUnit.Framework.CategoryAttribute("HealthCareByABC_For_User")]
         public virtual void ADetailedTestThroughTheHealthCareByABCWebsite()
         {
             string[] tagsOfScenario = new string[] {
-                    "HealthCareByABC"};
+                    "HealthCareByABC_For_User"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("A detailed test through the HealthCareByABC Website", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 8
@@ -132,6 +132,63 @@ testRunner.When("I click on Pay now", ((string)(null)), ((TechTalk.SpecFlow.Tabl
 #line hidden
 #line 18
 testRunner.Then("Payment Receipt should be received", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("A detailed Admin test through the HealthCareByABC Website")]
+        [NUnit.Framework.CategoryAttribute("HealthCareByABC_For_Admin")]
+        public virtual void ADetailedAdminTestThroughTheHealthCareByABCWebsite()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "HealthCareByABC_For_Admin"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("A detailed Admin test through the HealthCareByABC Website", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 21
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 22
+testRunner.Given("I have navigated to HealthCareByABC website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 23
+testRunner.And("I go to Login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 24
+testRunner.And("I enter Admin Credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 25
+testRunner.And("After Login Admin Portal will be opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 26
+testRunner.And("Admin can view and edit categories", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 27
+testRunner.And("Admin can View and edit medicines", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 28
+testRunner.When("Admin adds Medicine", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 29
+testRunner.Then("Medicines are updated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

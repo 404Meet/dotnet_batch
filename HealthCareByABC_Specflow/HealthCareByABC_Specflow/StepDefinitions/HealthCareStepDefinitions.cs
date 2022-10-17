@@ -15,6 +15,17 @@ namespace HealthCareByABC_Specflow.StepDefinitions
         private String email = "User2gmail.com";
         private String mobile = "9237461930";
 
+        private String admin_uname = "Admin";
+        private String admin_pass = "Admin@123";
+
+        private String medicine_name = "Soframycin";
+        private String medicine_expiry= "9 Month";
+        private String medicine_Price = "69";
+        private String medicine_description = "Soframycin Skin Cream is an antibiotic that is used for the treatment of bacterial skin infections. It works well for infected cuts, wounds, and minor burns. This medication inhibits the growth of bacteria, which aids in the resolution of your symptoms and the cure of the underlying infection.";
+        private String medicine_Photo = "https://5.imimg.com/data5/YX/VY/MY-17376909/soframycin-500x500.jpg";
+
+
+
         public HealthCareStepDefinitions() => chromeDriver = new ChromeDriver("C:\\Users\\meet.popat\\Downloads\\chromedriver_win32");
 
         [Given(@"I have navigated to HealthCareByABC website")]
@@ -119,16 +130,85 @@ namespace HealthCareByABC_Specflow.StepDefinitions
             Assert.IsTrue(chromeDriver.Title.Contains("React App"));
         }
 
+        [Given(@"I go to Login")]
+        public void GivenIGoToLogin()
+        {
+            WebDriverWait wait = new WebDriverWait(chromeDriver, TimeSpan.FromMilliseconds(120000));
+            var searchButton = chromeDriver.FindElement(By.CssSelector("li#Login"));
+            searchButton.Click();
+        }
 
+        [Given(@"I enter Admin Credentials")]
+        public void GivenIEnterAdminCredentials()
+        {
+            WebDriverWait wait = new WebDriverWait(chromeDriver, TimeSpan.FromMilliseconds(120000));
+            IWebElement textfield = chromeDriver.FindElement(By.CssSelector("input#uname"));
+            textfield.SendKeys(admin_uname);
+            WebDriverWait wait3 = new WebDriverWait(chromeDriver, TimeSpan.FromMilliseconds(120000));
+            IWebElement textfield2 = chromeDriver.FindElement(By.CssSelector("input#pass"));
+            textfield2.SendKeys(admin_pass);
+            WebDriverWait wait2 = new WebDriverWait(chromeDriver, TimeSpan.FromMilliseconds(120000));
+            var Button = chromeDriver.FindElement(By.CssSelector("button#log"));
+            Button.Click();
+        }
 
+        [Given(@"After Login Admin Portal will be opened")]
+        public void GivenAfterLoginAdminPortalWillBeOpened()
+        {
+            WebDriverWait wait = new WebDriverWait(chromeDriver, TimeSpan.FromMilliseconds(20000000000));
+            chromeDriver.Navigate().GoToUrl("http://localhost:3000/AdminPortal");
+            Assert.IsTrue(chromeDriver.Title.Contains("React App"));
+        }
 
+        [Given(@"Admin can view and edit categories")]
+        public void GivenAdminCanViewAndEditCategories()
+        {
+            WebDriverWait wait = new WebDriverWait(chromeDriver, TimeSpan.FromMilliseconds(12000000));
+            var searchButton = chromeDriver.FindElement(By.CssSelector("ul#category"));
+            searchButton.Click();
 
+        }
 
+        [Given(@"Admin can View and edit medicines")]
+        public void GivenAdminCanViewAndEditMedicines()
+        {
+            WebDriverWait wait = new WebDriverWait(chromeDriver, TimeSpan.FromMilliseconds(12000000));
+            var searchButton = chromeDriver.FindElement(By.CssSelector("ul#medicine"));
+            searchButton.Click();
+        }
 
+        [When(@"Admin adds Medicine")]
+        public void WhenAdminAddsMedicine()
+        {
+            WebDriverWait wait = new WebDriverWait(chromeDriver, TimeSpan.FromMilliseconds(12000000));
+            var searchButton = chromeDriver.FindElement(By.CssSelector("button#add"));
+            searchButton.Click();
 
+        }
 
+        [Then(@"Medicines are updated")]
+        public void ThenMedicinesAreUpdated()
+        {
+            WebDriverWait wait = new WebDriverWait(chromeDriver, TimeSpan.FromMilliseconds(120000));
+            IWebElement textfield = chromeDriver.FindElement(By.CssSelector("input#name"));
+            textfield.SendKeys(medicine_name);
+            WebDriverWait wait3 = new WebDriverWait(chromeDriver, TimeSpan.FromMilliseconds(120000));
+            IWebElement textfield2 = chromeDriver.FindElement(By.CssSelector("input#exp"));
+            textfield2.SendKeys(medicine_expiry);
+            WebDriverWait wait4 = new WebDriverWait(chromeDriver, TimeSpan.FromMilliseconds(120000));
+            IWebElement textfield3 = chromeDriver.FindElement(By.CssSelector("input#price"));
+            textfield3.SendKeys(medicine_Price);
+            WebDriverWait wait5 = new WebDriverWait(chromeDriver, TimeSpan.FromMilliseconds(120000));
+            IWebElement textfield4 = chromeDriver.FindElement(By.CssSelector("input#desc"));
+            textfield4.SendKeys(medicine_description);
+            WebDriverWait wait6 = new WebDriverWait(chromeDriver, TimeSpan.FromMilliseconds(120000));
+            IWebElement textfield5 = chromeDriver.FindElement(By.CssSelector("input#photo"));
+            textfield5.SendKeys(medicine_Photo);
 
-
+            WebDriverWait wait2 = new WebDriverWait(chromeDriver, TimeSpan.FromMilliseconds(120000));
+            var Button = chromeDriver.FindElement(By.XPath("/html/body/div[1]/div/div/div[2]/div[2]/div/div/div[2]/ul/button"));
+            Button.Click();
+        }
 
     }
 }

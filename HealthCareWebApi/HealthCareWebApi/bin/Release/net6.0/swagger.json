@@ -5,6 +5,25 @@
     "version": "1.0"
   },
   "paths": {
+    "/Buy": {
+      "get": {
+        "tags": [
+          "Buy"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/Category": {
       "get": {
         "tags": [
