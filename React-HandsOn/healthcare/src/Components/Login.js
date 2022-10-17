@@ -77,7 +77,7 @@ export default class Login extends Component {
 
                                 <div className="input-group mb-3">
                                     <span className="input-group-text">Password</span>
-                                    <input id="pass" type="text" className="form-control"
+                                    <input id="pass" type="password" className="form-control"
                                     onChange={this.changePassword}
                                     />
                                 </div>

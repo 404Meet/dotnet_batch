@@ -230,6 +230,7 @@ export default class Employee extends Component{
 <div className='App container'>
 
     <button type="button"
+    id="add"
     className="btn btn-primary m-2 float-end"
     data-bs-toggle="modal"
     data-bs-target="#exampleModal"
@@ -329,7 +330,7 @@ export default class Employee extends Component{
     
         <div className="input-group mb-3">
             <span className="input-group-text">Medicine Name</span>
-            <input type="text" className="form-control"
+            <input id="name" type="text" className="form-control"
             value={MedicineName}
             onChange={this.changeMedicineName}/>
         </div>
@@ -347,28 +348,28 @@ export default class Employee extends Component{
 
         <div className="input-group mb-3">
             <span className="input-group-text">Expiry</span>
-            <input type="text" className="form-control"
+            <input id="exp" type="text" className="form-control"
             value={ExpiryPeriod}
             onChange={this.changeExpiryPeriod}/>
         </div>
 
         <div className="input-group mb-3">
             <span className="input-group-text">Price</span>
-            <input type="text" className="form-control"
+            <input id="price" type="text" className="form-control"
             value={Price}
             onChange={this.changePrice}/>
         </div>
 
         <div className="input-group mb-3">
             <span className="input-group-text">Description</span>
-            <input type="text" className="form-control"
+            <input id="desc" type="text" className="form-control"
             value={Description}
             onChange={this.changeDescription}/>
         </div>
 
         <div className="input-group mb-3">
             <span className="input-group-text">Photo</span>
-            <input type="text" className="form-control"
+            <input id="photo" type="text" className="form-control"
             value={PhotoFileName}
             onChange={this.changePhotoFileName}/>
         </div>
@@ -383,12 +384,15 @@ export default class Employee extends Component{
     </div>
 
     {MedicineId===0?
+        <ul id="add">
         <button type="button"
         className="btn btn-primary float-start"
         onClick={()=>this.createClick()}
         >Create</button>
+        </ul>
         :null}
-
+        
+       
         {MedicineId!==0?
         <button type="button"
         className="btn btn-primary float-start"

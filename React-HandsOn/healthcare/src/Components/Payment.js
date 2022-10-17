@@ -22,7 +22,7 @@ export default class Payment extends Component {
                         <td align="center">RS. 180 /-</td>
                     </tr>
                     
-                    <p className="card-text">Thank You!!! Keep Smiling, Keep Eating. </p>
+                    <p className="card-text">Thank You!!! Keep Smiling. It's the Best Medicine. </p>
                     </center>
                 </div>
             </div>

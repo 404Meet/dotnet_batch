@@ -13,8 +13,12 @@ export default function AdminPortal() {
             <div className="App container d-flex flex-row">
                 {/* <img alt="photo" width="250px" height="250px" src="https://www.svgrepo.com/show/61986/avatar.svg"/>
                 <br></br> */}
-                <NavLink id="login" className="form-control btn btn-primary m-1"  to="/category">&nbsp;Edit Category</NavLink>
-                <NavLink id="register" className="form-control btn btn-primary m-1" to="/medicine">View Medicines</NavLink>
+                
+                <NavLink className="form-control btn btn-primary m-1"  to="/category">&nbsp;Edit Category</NavLink>
+                
+                
+                <NavLink className="form-control btn btn-primary m-1" to="/medicine">View Medicines</NavLink>
+                
             </div>
             <Switch>
             <Route path='/category' component={Category}/>
